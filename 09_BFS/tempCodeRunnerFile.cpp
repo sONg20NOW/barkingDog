@@ -1,7 +1,7 @@
-cout << "---FIRE (INIT)---" << '\n';
-        for (int i = 0; i < h; i++) {
-            for (int j = 0; j < w; j++) {
-                cout << timeF[i][j] << ' ';
-            }AC
-            cout << '\n';
+out << "when melt?" << '\n';
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            cout << when_melt[i][j] << ' ';
         }
+        cout << '\n';
+    }
