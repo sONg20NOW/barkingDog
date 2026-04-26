@@ -10,6 +10,7 @@ int main() {
     Q.push(N);
     vis[0][N] = 100;
 
+    // A는 현재 초.
     int A = 0;
 
     while(!Q.empty()) {
