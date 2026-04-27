@@ -9,6 +9,7 @@ int main() {
     long long count = 0;
 
     vector<int> line;
+    // first: 키, second: 그 키를 가진 사람 수
     stack<pair<int, int>> st;
     while (N--) {
         int n;
@@ -26,20 +27,20 @@ int main() {
         } 
         // 나보다 작은 애들 정리 -> 얘네는 나 때문에 가려지니까 더 이상 스택에 남을 이유가 없음.
         else if (st.top().first < a) {
-            count += st.top().second;
+            count += st.top().second;   // 나보다 작은 애들 다 볼 수 있음.
             st.pop();
         } 
         // 나랑 같은 애들 -> 키가 같은 애들 다 볼 수 있고, 그 다음에 키 큰 사람이 있다면 그 사람까지 볼 수 있음.
         else if (st.top().first == a) {
-            count += st.top().second++;
+            count += st.top().second++; // 나랑 같은 애들 다 볼 수 있음.
             if (st.size() > 1) {
-                count++;
+                count++;    // 그 다음 큰 사람 있으면 그 사람까지
             }
             idx++;
         }
         // 나보다 큰 애들 -> 나보다 큰 애 한명만 볼 수 있음.
          else {
-            count++;
+            count++;    // 나보다 큰 애 한 명만 볼 수 있음.
             st.push({a, 1});
             idx++;
         }
