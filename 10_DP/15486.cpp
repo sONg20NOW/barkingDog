@@ -2,7 +2,7 @@
 using namespace std;
 
 int N;
-const int MX = 16;
+const int MX = 1500001;
 int T[MX];
 int P[MX];
 int D[MX];
